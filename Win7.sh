@@ -16,8 +16,8 @@ sudo qemu-system-x86_64 \
   -m 11G \
   -cpu EPYC \
   -boot order=d \
-  -drive file=windows864.iso,media=cdrom \
-  -drive file=windows864.img,format=raw,if=virtio \
+  -drive file=windows7.iso,media=cdrom \
+  -drive file=windows7.img,format=raw,if=virtio \
   -drive file=virtio-win.iso,media=cdrom \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
   -device usb-tablet \
