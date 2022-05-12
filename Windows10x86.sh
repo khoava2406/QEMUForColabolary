@@ -13,7 +13,7 @@ wget -O windows10.iso 'https://dl.malwarewatch.org/windows/Windows%2010%201507.i
 clear
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 1.5G \
+  -m 11G \
   -cpu EPYC \
   -boot order=d \
   -drive file=windows10.iso,media=cdrom \
@@ -22,4 +22,4 @@ sudo qemu-system-x86_64 \
   -device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
   -device usb-tablet \
   -vnc :0 \
-  -smp cores=2 \
+  -smp cores=8 \
