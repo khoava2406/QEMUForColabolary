@@ -1,2 +1,2 @@
 # QEMUForColabolary
-idk
+https://notes.io/qwrrR
