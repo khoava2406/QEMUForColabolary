@@ -9,8 +9,9 @@ sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
 qemu-img create -f raw windows.img 32G
 wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
+read -p "Paste your windows file here (Direct Link / not a Goggle Drive one): " $CRP
 wget -O windows.iso ' CRP '
-read -p "Paste your windows file here (Direct Link / not a Goggle Drive one): " CRP
+
 clear
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
